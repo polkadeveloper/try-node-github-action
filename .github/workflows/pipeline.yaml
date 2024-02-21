@@ -17,6 +17,6 @@ jobs:
         with:
           node-version: '14'
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
       - name: Run Linter
-        run: eslint . --fix
+        run: pnpm lint
