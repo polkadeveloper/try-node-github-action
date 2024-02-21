@@ -12,6 +12,6 @@ export function isEven(n) {
 } 
 
 export function isOdd(n) {
-  return n % 2 !== 1;
+  return n % 2 !== 0;
 }
 // Path: app.spec.js
