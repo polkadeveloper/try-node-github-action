@@ -1,16 +1,17 @@
-import fs from 'fs'
+// sum.js
+export function sum(a, b) {
+  return a + b;
+}
+// --> Extract the last index of an array
+export function lastIndex(array) {
+  return array.at(-1);
+}
 
-fs.readFile('file.txt', 'utf8', (err, data) => {
-  const lines = data.split('\n')
+export function isEven(n) {
+  return n % 2 === 0;
+} 
 
-  console.log(lines)
-
-  lines.forEach((line) => {
-    console.log(line)
-  })
-
-  if (err) {
-    console.log(err)
-    console.log('Error reading file')
-  }
-})
+export function isOdd(n) {
+  return n % 2 !== 0;
+}
+// Path: app.spec.js
