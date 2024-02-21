@@ -27,7 +27,7 @@ test("check if the max distance is correct", () => {
 })
 
 test("check if the max distance is correct", () => {
-  expect(maxDistance(">>*<")).toBe(4);
+  expect(maxDistance(">>*<")).toBe(2);
   console.log('Expected: 2');
   console.log('Actual: ', maxDistance(">>*<"));
 });
