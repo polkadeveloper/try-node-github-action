@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 });
 
 app.get("/api/server", (req, res) => {
-  res.json({ message: "Hello Manyu" });
+  res.json({ message: "Hello Manyu", data: "This is a test" });
 });
 
 app.listen(PORT, () => {
