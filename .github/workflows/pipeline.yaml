@@ -15,9 +15,9 @@ jobs:
 
     steps:
       - name: Chekout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Install pnpm
@@ -34,9 +34,9 @@ jobs:
 
     steps:
       - name: Chekout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
       - name: Install pnpm
@@ -49,13 +49,13 @@ jobs:
         run: pnpm test
 
   Deploy-Production:
-    needs: Linter
+    needs: [Linter, Tests]
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20
       - uses: pnpm/action-setup@v2
