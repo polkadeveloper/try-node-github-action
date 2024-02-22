@@ -49,7 +49,7 @@ jobs:
         run: pnpm test
 
   Deploy-Production:
-    needs: lint
+    needs: Linter
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
