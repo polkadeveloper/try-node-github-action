@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/Alvar/OneDrive/Escritorio/MisProyectos/github-actions/aprendiendo-github-actions/.github/workflows/deploy.yaml"
+  }
+}
