@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     fetch('/api/server')
       .then(res => res.json())
       .then(data => {
-        document.getElementById('message').textContent = JSON.stringify(data);
+        document.getElementById('message').textContent = data.message;
       })
   </script>
   <h1 id="message">HOLA BURRO</h1>
