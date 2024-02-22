@@ -18,6 +18,10 @@ app.get("/api/server", (req, res) => {
   res.send("Hello World");
 });
 
+app.get("/api/alo", (req, res) => {
+  res.send("Alo Mundo");
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor is running on http://localhost:${PORT}`);
 });
