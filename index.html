@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>HOLA</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      (async () => {
+        const response = await fetch('/api/server')
+        const data = await response.json()
+
+        Object.entries(data).map(([key, value]) => {
+          let li = document.createElement('li')
+          li.innerHTML = `${key}: ${value}`
+          document.getElementById('message').appendChild(li)
+        });
+      })()
+    </script>
+    <h1 id="message">Renderizado:</h1>
+  </body>
 </html>
