@@ -10,6 +10,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello Manyu");
+});
+
 app.get("/api/server", (req, res) => {
   res.send("Hello World");
 });
