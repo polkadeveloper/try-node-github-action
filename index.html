@@ -7,14 +7,16 @@
   </head>
   <body>
     <script>
-      const response = await fetch('/api/server')
-      const data = await response.json()
+      (async () => {
+        const response = await fetch('/api/server')
+        const data = await response.json()
 
-      data.map((item) => {
-        let li = document.createElement('li')
-        li.innerHTML = item
-        document.getElementById('message').appendChild(li)
-      });
+        Object.entries(data).map(([key, value]) => {
+          let li = document.createElement('li')
+          li.innerHTML = `${key}: ${value}`
+          document.getElementById('message').appendChild(li)
+        });
+      })()
     </script>
     <h1 id="message">Renderizado:</h1>
   </body>
