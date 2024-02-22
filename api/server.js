@@ -10,16 +10,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello Manyu");
-});
-
 app.get("/api/server", (req, res) => {
-  res.send("Hello World");
-});
-
-app.get("/api/alo", (req, res) => {
-  res.send("Alo Mundo");
+  res.json({ message: "Hello Manyu" });
 });
 
 app.listen(PORT, () => {
